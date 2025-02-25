@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Sales & Logistics</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        .container { max-width: 1000px; margin: auto; padding: 20px; background: #fff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+        h1, h2 { text-align: center; color: #333; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 20px; }
+        .product { background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.1); text-align: center; }
+        .product img { width: 100%; height: 150px; object-fit: cover; border-radius: 8px; }
+        .order-form, .rider-form { padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.1); margin-top: 20px; }
+        button { background: #28a745; color: #fff; border: none; padding: 10px 15px; cursor: pointer; border-radius: 5px; }
+        button:hover { background: #218838; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Farm Products Sales & Logistics</h1>
+        
+        <h2>Available Products</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="tomatoes.jpg" alt="Fresh Tomatoes">
+                <h3>Fresh Tomatoes</h3>
+                <p>Price: $2 per kg</p>
+                <p>Available: 100 kg</p>
+            </div>
+            <div class="product">
+                <img src="carrots.jpg" alt="Organic Carrots">
+                <h3>Organic Carrots</h3>
+                <p>Price: $3 per kg</p>
+                <p>Available: 50 kg</p>
+            </div>
+            <div class="product">
+                <img src="potatoes.jpg" alt="Golden Potatoes">
+                <h3>Golden Potatoes</h3>
+                <p>Price: $1.5 per kg</p>
+                <p>Available: 200 kg</p>
+            </div>
+            <div class="product">
+                <img src="apples.jpg" alt="Red Apples">
+                <h3>Red Apples</h3>
+                <p>Price: $4 per kg</p>
+                <p>Available: 80 kg</p>
+            </div>
+        </div>
+
+        <h2>Place an Order</h2>
+        <div class="order-form">
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                
+                <label for="product">Select Product:</label>
+                <select id="product" name="product">
+                    <option value="tomatoes">Fresh Tomatoes</option>
+                    <option value="carrots">Organic Carrots</option>
+                    <option value="potatoes">Golden Potatoes</option>
+                    <option value="apples">Red Apples</option>
+                </select><br><br>
+                
+                <label for="quantity">Quantity (kg):</label>
+                <input type="number" id="quantity" name="quantity" min="1" required><br><br>
+                
+                <label for="address">Delivery Address:</label>
+                <textarea id="address" name="address" required></textarea><br><br>
+                
+                <button type="submit">Submit Order</button>
+            </form>
+        </div>
+
+        <h2>Find a Rider</h2>
+        <div class="rider-form">
+            <form>
+                <label for="rider-name">Your Name:</label>
+                <input type="text" id="rider-name" name="rider-name" required><br><br>
+                
+                <label for="rider-phone">Phone Number:</label>
+                <input type="tel" id="rider-phone" name="rider-phone" required><br><br>
+                
+                <label for="pickup-location">Pickup Location:</label>
+                <input type="text" id="pickup-location" name="pickup-location" required><br><br>
+                
+                <label for="delivery-location">Delivery Location:</label>
+                <input type="text" id="delivery-location" name="delivery-location" required><br><br>
+                
+                <button type="submit">Find Rider</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
